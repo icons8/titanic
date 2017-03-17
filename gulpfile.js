@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var del = require('del');
 var inject = require('gulp-inject');
 var runSequence = require('run-sequence');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
 
 
 gulp.task('default', function(callback) {
@@ -11,11 +14,18 @@ runSequence('build',
 });
 
 // JS for bodymovin and jQuery
-gulp.task('vendor-scripts', function() {
+gulp.task('js', function() {
   return gulp.src([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bodymovin/build/player/bodymovin.min.js'
+    './src/js/titanic.js',
+    './node_modules/bodymovin/build/player/bodymovin.js'
     ])
+    .pipe(concat('titanic.js'))
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+
     .pipe(gulp.dest('dist/js/'));
 });
 
@@ -30,20 +40,20 @@ gulp.task('clean', function(){
   return del('dist/*');
 });
 
-// Copies index to /dist
-gulp.task('copy-index', function() {
-  return gulp.src('src/index.html')
-    .pipe(gulp.dest('dist/'));
-});
 
 // Injects styles and apps into index.html
-gulp.task('index', ['copy-index'], function () {
+gulp.task('index', function () {
+  
   console.log('Injecting...');
-  var target = gulp.src('dist/index.html');
-  var vendorJSSource = gulp.src('dist/js/*.js', {read: false});
- 
+
+  gulp.src('src/index.html')
+        .pipe(gulp.dest('dist/'));
+  
   // Inserting vendor JS
-  return target.pipe(inject(vendorJSSource, 
+  var targetHTML = gulp.src('dist/index.html');
+  var sourceJS = gulp.src('dist/js/*.js', {read: false});
+ 
+  return targetHTML.pipe(inject(sourceJS, 
                            {starttag: '<!-- inject:js -->', 
                             relative: true}))
                .pipe(gulp.dest('dist'));
@@ -51,15 +61,15 @@ gulp.task('index', ['copy-index'], function () {
 
 gulp.task('build', function(callback) {
 runSequence('clean',
-            'vendor-scripts',
             'images',
+            'js',
             'index',
             callback);
 });
 
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['app-scripts']);
-  gulp.watch('src/index.html', ['copy-index'], 'index');
+  gulp.watch('src/index.html', ['index']);
   gulp.watch('src/images/*', ['images']);
   gulp.watch('gulpfile.js', ['build']);
 });
