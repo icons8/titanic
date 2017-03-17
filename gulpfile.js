@@ -14,7 +14,7 @@ runSequence('build',
 gulp.task('vendor-scripts', function() {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bodymovin/build/player/bodymovin_light.min.js'
+    './node_modules/bodymovin/build/player/bodymovin.min.js'
     ])
     .pipe(gulp.dest('dist/js/'));
 });
@@ -42,8 +42,10 @@ gulp.task('index', ['copy-index'], function () {
   var target = gulp.src('dist/index.html');
   var vendorJSSource = gulp.src('dist/js/*.js', {read: false});
  
-  // Inserting vendor JS into the head
-  return target.pipe(inject(vendorJSSource, {starttag: '<!-- inject:js -->', relative: true}))
+  // Inserting vendor JS
+  return target.pipe(inject(vendorJSSource, 
+                           {starttag: '<!-- inject:js -->', 
+                            relative: true}))
                .pipe(gulp.dest('dist'));
 });
 
