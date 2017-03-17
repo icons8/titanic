@@ -4,8 +4,7 @@
   "description": "A pack of animated icons",
   "main": "dist/index.html",
   "dependencies": {
-    "bodymovin": "^4.5.9",
-    "jquery": "^3.2.0"
+    "bodymovin": "^4.5.9"
   },
   "devDependencies": {
     "del": "^2.2.2",

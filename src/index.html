@@ -3,7 +3,7 @@
 <head>
 <style>
 
-    .bodymovin {
+    .titanic {
         width: 100px;
         height: 100px;
         display: inline-block;
@@ -12,7 +12,7 @@
         padding:20px;
     }
 
-    .bodymovin path {
+    .titanic path {
         fill: #249795;
         stroke: #249795;
     }
@@ -38,17 +38,18 @@
 
 <body>
 
-    <!--Container for all icons-->
-    <div class="block">
+<!--Container for all icons-->
+<div class="block">
 
 
-<!--mic animated icon begins-->
-<div id='icons8-mic' class='bodymovin'></div>
+<div id='icons8-mic' class='titanic'></div>
+<div id='icons8-chat' class='titanic'></div>
+<div id='icons8-caps' class='titanic'></div>
 
 <script>
 
-   (function(name) {
-   var anime;
+var Titanic = function(name) {
+   var anim;
    var state = 0;
 
    function start() {
@@ -63,10 +64,13 @@
        state++;
    }
 
-    $(document).ready(function () {
-    // Feel free to handle any other events here, not just click or hover
-        $('#icons8-'+name).click(start);
-        $('#icons8-'+name).hover(start);
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // Feel free to handle any other events here, not just click or hover
+        document.getElementById('icons8-'+name).addEventListener("click", start);
+        document.getElementById('icons8-'+name).addEventListener("pointerenter", start);
+        document.getElementById('icons8-'+name).addEventListener("pointerleave", start);
+        
 
         anim = bodymovin.loadAnimation({
             container: document.getElementById('icons8-'+name),
@@ -74,94 +78,25 @@
             loop: false,
             autoplay: false,
             path: 'icons/'+name+'.json'
-        });
+        }); 
 
-        console.log(anim);
     });
-    })('mic');
+};
 
+
+/*$.earch($(".titanic"), function() {
+    var id = $(this).attr("id");
+    var id = new Titanic(id);
+})
+*/
 </script>
+
+<script>
+    var mic = new Titanic('mic');
+    var chat = new Titanic('chat');
+    var chat = new Titanic('caps');
+</script>
+
 <!--mic animated icon ends-->
-
-<!--caps animated icon begins-->
-<div id='icons8-caps' class='bodymovin'></div>
-
-<script>
-
-   (function(name) {
-   var anim;
-   var state = 0;
-
-   function start() {
-       if (state % 2 == 0) {
-           // All animations have 28 frames:
-           // - First 14 ones for changing the satate
-           // - And the next 14 back to return to the original state
-           anim.playSegments([0, 13], true);
-       } else {
-           anim.playSegments([14, 27], true);
-       }
-       state++;
-   }
-
-    $(document).ready(function () {
-    // Feel free to handle any other events here, not just click or hover
-        $('#icons8-'+name).click(start);
-        $('#icons8-'+name).hover(start);
-
-        anim = bodymovin.loadAnimation({
-            container: document.getElementById('icons8-'+name),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: 'icons/'+name+'.json'
-        });
-
-    });
-    })('caps');
-
-</script>
-<!--caps animated icon ends-->
-
-<!--chat animated icon begins-->
-<div id='icons8-chat' class='bodymovin'></div>
-
-<script>
-
-   (function(name) {
-   var anim;
-   var state = 0;
-
-   function start() {
-       if (state % 2 == 0) {
-           // All animations have 28 frames:
-           // - First 14 ones for changing the satate
-           // - And the next 14 back to return to the original state
-           anim.playSegments([0, 13], true);
-       } else {
-           anim.playSegments([14, 27], true);
-       }
-       state++;
-   }
-
-    $(document).ready(function () {
-    // Feel free to handle any other events here, not just click or hover
-        $('#icons8-'+name).click(start);
-        $('#icons8-'+name).hover(start);
-
-        anim = bodymovin.loadAnimation({
-            container: document.getElementById('icons8-'+name),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: 'icons/'+name+'.json'
-        });
-
-    });
-    })('chat');
-
-</script>
-<!--chat animated icon ends-->
-
     </body>
     </html>

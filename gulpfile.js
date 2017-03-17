@@ -59,7 +59,7 @@ runSequence('clean',
 
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['app-scripts']);
-  gulp.watch('src/index.html', ['index']);
+  gulp.watch('src/index.html', ['copy-index'], 'index');
   gulp.watch('src/images/*', ['images']);
   gulp.watch('gulpfile.js', ['build']);
 });
