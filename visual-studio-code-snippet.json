@@ -35,8 +35,6 @@
 "            autoplay: false,",
 "            path: 'icons/'+name+'.json'",
 "        });",
-"",
-"        console.log(anim);",
 "    });",
 "    })();",
 "",
