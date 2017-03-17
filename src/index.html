@@ -1,0 +1,469 @@
+
+<html>
+
+<head>
+<style>
+
+    .bodymovin {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+
+        /*Decoration for the presentation only, remove it when using on your own*/
+        padding:20px;
+    }
+
+    .bodymovin path {
+        fill: #249795;
+        stroke: #249795;
+    }
+
+    body {
+        display: table;
+        height: 100%;
+    }
+
+    .block {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 100px;
+    }
+
+</style>
+</head>
+
+<body>
+
+
+    <div class="block">
+
+    <!--Insert this once for animated icons-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    
+
+
+    <!--block_microphone animated icon begins-->
+    <div id='icons8-block_microphone' class='bodymovin'></div>
+    
+    <script>
+
+        (function() {
+        var anime;
+        var state = 0;
+        var name = 'block_microphone';
+
+        function start() {
+            if (state % 2 == 0) {
+                // All animations have 28 frames:
+                // - First 14 ones for changing the satate
+                // - And the next 14 back to return to the original state
+                anim.playSegments([0, 13], true);
+            } else {
+                anim.playSegments([14, 27], true);
+            }
+            state++;
+        }
+
+        $(document).ready(function () {
+            // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!-- animated icon ends-->
+
+    <!--caps animated icon begins-->
+    <div id='icons8-caps' class='bodymovin'></div>
+    
+    <script>
+
+        (function() {
+        var anime;
+        var state = 0;
+        var name = 'caps';
+
+        function start() {
+            if (state % 2 == 0) {
+                // All animations have 28 frames:
+                // - First 14 ones for changing the satate
+                // - And the next 14 back to return to the original state
+                anim.playSegments([0, 13], true);
+            } else {
+                anim.playSegments([14, 27], true);
+            }
+            state++;
+        }
+
+        $(document).ready(function () {
+            // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--caps animated icon ends-->
+
+    <!--chat animated icon begins-->
+    <div id='icons8-chat' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'chat';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--chat animated icon ends-->
+
+    <!--checkbox animated icon begins-->
+    <div id='icons8-checkbox' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'checkbox';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--checkbox animated icon ends-->
+
+    <!--expand animated icon begins-->
+    <div id='icons8-expand' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'expand';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--expand animated icon ends-->
+
+    <!--expensive1 animated icon begins-->
+    <div id='icons8-expensive1' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'expensive1';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--expensive1 animated icon ends-->
+
+    <!--expensive2 animated icon begins-->
+    <div id='icons8-expensive2' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'expensive2';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--expensive2 animated icon ends-->
+
+    <!--idea animated icon begins-->
+    <div id='icons8-idea' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'idea';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--idea animated icon ends-->
+
+    <!--mailbox animated icon begins-->
+    <div id='icons8-mailbox' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'mailbox';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--mailbox animated icon ends-->
+
+    <!--no_microphone animated icon begins-->
+    <div id='icons8-no_microphone' class='bodymovin'></div>
+    
+    <script>
+    
+       (function() {
+       var anime;
+       var state = 0;
+       var name = 'no_microphone';
+    
+       function start() {
+           if (state % 2 == 0) {
+               // All animations have 28 frames:
+               // - First 14 ones for changing the satate
+               // - And the next 14 back to return to the original state
+               anim.playSegments([0, 13], true);
+           } else {
+               anim.playSegments([14, 27], true);
+           }
+           state++;
+       }
+    
+        $(document).ready(function () {
+        // Feel free to handle any other events here, not just click or hover
+            $('#icons8-'+name).click(start);
+            $('#icons8-'+name).hover(start);
+    
+            anim = bodymovin.loadAnimation({
+                container: document.getElementById('icons8-'+name),
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'icons/'+name+'.json'
+            });
+    
+            console.log(anim);
+        });
+        })();
+    
+    </script>
+    <!--no_microphone animated icon ends-->
+
+    </body>
+    </html>
