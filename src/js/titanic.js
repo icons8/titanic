@@ -35,7 +35,7 @@ var Titanic = function(name) {
 };
 
 // Initialization
-var showtime = function() {
+var titanic = function() {
     
     function begin() {
     var divs = document.getElementsByClassName('titanic');
@@ -53,10 +53,3 @@ var showtime = function() {
     }
 
 }();
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     init();
-// });
-
-
-
