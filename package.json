@@ -12,6 +12,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-inject": "^4.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.1.0",
     "run-sequence": "^1.2.2"
   },

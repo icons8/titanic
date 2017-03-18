@@ -41,29 +41,24 @@
 <!--Container for all icons-->
 <div class="block">
 
+    <div id='mic' class='titanic'></div>
+    <div id='chat' class='titanic'></div>
+    <div id='caps' class='titanic'></div>
 
-<div id='icons8-mic' class='titanic'></div>
-<div id='icons8-chat' class='titanic'></div>
-<div id='icons8-caps' class='titanic'></div>
-
+</div>
 <script>
-
-
-
-
-/*$.earch($(".titanic"), function() {
-    var id = $(this).attr("id");
-    var id = new Titanic(id);
-})
-*/
+// Initialization
+(function() {
+    var divs = document.getElementsByClassName('titanic');
+    var icons = [];
+    var iconID;
+    var i = divs.length;
+    while(i) {
+        i--;
+        iconID = divs[i].id;
+        icons[i] = new Titanic(iconID);
+    }
+})();
 </script>
-
-<script>
-    var mic = new Titanic('mic');
-    var chat = new Titanic('chat');
-    var chat = new Titanic('caps');
-</script>
-
-<!--mic animated icon ends-->
-    </body>
-    </html>
+</body>
+</html>

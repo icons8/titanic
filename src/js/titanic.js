@@ -3,7 +3,7 @@ var Titanic = function(name) {
    var state = 0;
 
    function start() {
-       if (state % 2 == 0) {
+       if (state % 2 === 0) {
            // All animations have 28 frames:
            // - First 14 ones for changing the satate
            // - And the next 14 back to return to the original state
@@ -16,14 +16,15 @@ var Titanic = function(name) {
 
     document.addEventListener("DOMContentLoaded", function() {
         
+        var d = document.getElementById(name);
         // Feel free to handle any other events here, not just click or hover
-        document.getElementById('icons8-'+name).addEventListener("click", start);
-        document.getElementById('icons8-'+name).addEventListener("pointerenter", start);
-        document.getElementById('icons8-'+name).addEventListener("pointerleave", start);
+        d.addEventListener("click", start);
+        d.addEventListener("pointerenter", start);
+        d.addEventListener("pointerleave", start);
         
 
         anim = bodymovin.loadAnimation({
-            container: document.getElementById('icons8-'+name),
+            container: d,
             renderer: 'svg',
             loop: false,
             autoplay: false,
@@ -32,3 +33,4 @@ var Titanic = function(name) {
 
     });
 };
+
