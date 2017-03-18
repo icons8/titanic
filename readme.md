@@ -2,6 +2,8 @@
 
 A collection of animated icons + javascript library.
 
+![Preview](https://maxcdn.icons8.com/app/uploads/2017/01/animated-icons-preview.gif)
+
 ## Installation
 
 You can install it either via CDN or npm.
@@ -50,3 +52,16 @@ If you'd like to host your images on your server instead of rawgit, pass the bas
 titanic.begin('/my/base/directory/');
 ```
 Then, if you have a div with id="chat", Titanic will search for icons in /my/base/directory/chat.json.
+
+## npm
+
+```
+npm install titanic --save
+```
+
+## Credits
+JavaScript is basically [bodymovin](https://github.com/bodymovin/bodymovin) plus few lines of my code. It's a solid library with an awesome name. Thank you, guys.
+
+Icons are created by [Margarita Ivanchikova](https://dribbble.com/imargarita) from [Icons8](https://icons8.com/). She has many more awesome animations in her portfolio:
+
+![Magritte](https://d13yacurqjgara.cloudfront.net/users/1003944/screenshots/2385329/10.gif)
