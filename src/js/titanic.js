@@ -1,4 +1,4 @@
-var Titanic = function(name) {
+var Titanic = function(name, baseURL) {
    var anim;
    var state = 0;
 
@@ -28,7 +28,7 @@ var Titanic = function(name) {
             renderer: 'svg',
             loop: false,
             autoplay: false,
-            path: '/icons/'+name+'.json'
+            path: baseURL+name+'.json'
         }); 
 
     });
@@ -37,7 +37,7 @@ var Titanic = function(name) {
 // Initialization
 var titanic = function() {
     
-    function begin() {
+    function begin(baseURL) {
     var divs = document.getElementsByClassName('titanic');
     var icons = [];
     var iconID;
@@ -45,11 +45,11 @@ var titanic = function() {
     while(i) {
         i--;
         iconID = divs[i].id;
-        icons[i] = new Titanic(iconID);
+        icons[i] = new Titanic(iconID, baseURL);
         }
     }
     return  {
         begin: begin
-    }
+    };
 
 }();
