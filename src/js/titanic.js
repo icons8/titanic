@@ -38,6 +38,9 @@ var Titanic = function(name, baseURL) {
 var titanic = function() {
     
     function begin(baseURL) {
+    if(typeof baseURL == 'undefined') {
+        baseURL = 'https://cdn.rawgit.com/icons8/titanic/master/dist/icons/';
+    }
     var divs = document.getElementsByClassName('titanic');
     var icons = [];
     var iconID;
