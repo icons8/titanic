@@ -42,7 +42,7 @@ gulp.task('clean', function(){
 gulp.task('copy-index', function() {
   return gulp.src('src/index.html')
         .pipe(gulp.dest('dist/'));
-})
+});
 
 
 // Injects styles and apps into index.html

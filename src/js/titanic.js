@@ -28,9 +28,35 @@ var Titanic = function(name) {
             renderer: 'svg',
             loop: false,
             autoplay: false,
-            path: 'icons/'+name+'.json'
+            path: '/icons/'+name+'.json'
         }); 
 
     });
 };
+
+// Initialization
+var showtime = function() {
+    
+    function begin() {
+    var divs = document.getElementsByClassName('titanic');
+    var icons = [];
+    var iconID;
+    var i = divs.length;
+    while(i) {
+        i--;
+        iconID = divs[i].id;
+        icons[i] = new Titanic(iconID);
+        }
+    }
+    return  {
+        begin: begin
+    }
+
+}();
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     init();
+// });
+
+
 
