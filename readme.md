@@ -58,7 +58,7 @@ Then, if you have a div with id="chat", Titanic will search for icons in /my/bas
 ## npm
 
 ```
-npm install titanic --save
+npm install titanic-icons --save
 ```
 
 ## Credits
