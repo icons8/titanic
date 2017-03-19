@@ -14,7 +14,8 @@ You can install it either via CDN or npm.
 
 Insert this string to your HTML head:
 ```html
-<script src="https://cdn.rawgit.com/icons8/titanic/1af9dce0/dist/js/titanic.min.js"></script>
+<script src="https://cdn.rawgit.com/icons8/titanic/e2168ea3/dist/js/titanic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
 ```
 And initialize it before the body closes:
 
