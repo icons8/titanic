@@ -16,9 +16,14 @@ runSequence('build',
 
 // JS for bodymovin and jQuery
 gulp.task('js', function() {
+   gulp.src([
+   './node_modules/bodymovin/build/player/bodymovin.min.js'
+    ])
+    .pipe(gulp.dest('dist/js/'));
+
   return gulp.src([
     './src/js/titanic.js',
-    './node_modules/bodymovin/build/player/bodymovin.js'
+//    './node_modules/bodymovin/build/player/bodymovin.js'
     ])
     .pipe(sourceMaps.init())
       .pipe(concat('titanic.js'))
@@ -39,45 +44,34 @@ gulp.task('clean', function(){
   return del('dist/*');
 });
 
-gulp.task('copy-index', function() {
-  return gulp.src('src/index.html')
-        .pipe(gulp.dest('dist/'));
-});
-
 
 // Injects styles and apps into index.html
-gulp.task('inject', function () {
+gulp.task('index', function () {
   
   console.log('Injecting...');
   
   // Inserting vendor JS
-  var targetHTML = gulp.src('dist/index.html');
-  var sourceJS = gulp.src('dist/js/*.js', {read: false});
+  var targetHTML = gulp.src('index.html', {cwd: __dirname + '/src/'});
+  var sourceJS = gulp.src('js/*.js', {read: false, cwd: __dirname + '/src/'});
  
   return targetHTML.pipe(inject(sourceJS, 
                            {starttag: '<!-- inject:js -->', 
-                            relative: true}))
-               .pipe(gulp.dest('dist'));
+                            relative: true
+                            }))
+               .pipe(gulp.dest('./demo'));
 });
 
 gulp.task('build', function(callback) {
 runSequence('clean',
-            'images',
-            'js',
-            'copy-index',
-            'inject',
+            ['images', 'js'],
+            'index',
             callback);
 });
 
-gulp.task('index2', function(callback) {
-runSequence('copy-index', 
-            'inject', 
-            callback);
-});
 
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['js']);
-  gulp.watch('src/index.html', ['index2']);
+  gulp.watch('src/index.html', ['index']);
   gulp.watch('src/images/*', ['images']);
   gulp.watch('gulpfile.js', ['build']);
 });
