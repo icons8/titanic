@@ -52,7 +52,7 @@ gulp.task('index', function () {
   
   // Inserting vendor JS
   var targetHTML = gulp.src('index.html', {cwd: __dirname + '/src/'});
-  var sourceJS = gulp.src('js/*.js', {read: false, cwd: __dirname + '/src/'});
+  var sourceJS = gulp.src('js/*.js', {read: false, cwd: __dirname + '/dist/'});
  
   return targetHTML.pipe(inject(sourceJS, 
                            {starttag: '<!-- inject:js -->', 
