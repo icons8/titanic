@@ -1,0 +1,50 @@
+.titanic {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+/*Defines icon colors*/
+.titanic path {
+    fill: #249795;
+    stroke: #249795;
+}
+
+/*Decoration for the presentation only, remove it when using on your own*/    
+
+body {
+    display: table;
+    height: 100%;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.block {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 50px;
+}
+
+button, input, label {
+    min-height: 30px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+button { 
+    min-width: 80px;
+    background-color: #FF4D4D;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    margin-bottom: 50px;
+}
+
+input {
+    width: 150px;
+}
+
+.titanic {          
+    padding:20px;
+}
+

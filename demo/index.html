@@ -1,32 +1,6 @@
 <html>
 <head>
-<style>
-    .titanic {
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-
-        /*Decoration for the presentation only, remove it when using on your own*/
-        padding:20px;
-    }
-
-    .titanic path {
-        fill: #249795;
-        stroke: #249795;
-    }
-
-    body {
-        display: table;
-        height: 100%;
-    }
-
-    .block {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        padding: 0 50px;
-    }
-</style>
+<link rel="stylesheet" href="styles/demo.css">
 
 <!--Insert this once for animated icons-->
 <script src="../dist/js/titanic.min.js"></script>
@@ -35,26 +9,29 @@
 
 <body>
 
-<input id="myInput" value="expand">
-<button onclick="titanic.play(getElementById('myInput').value)">Play</button>
 
 <!--Container for all icons-->
 <div class="block">
+    <label>Send event to an icon</label>
+    <input id="myInput" value="checkbox">
+    <button onclick="titanic.play(getElementById('myInput').value)">Play</button>
+    <button onclick="titanic.on(getElementById('myInput').value)">On</button>
+    <button onclick="titanic.off(getElementById('myInput').value)">Off</button><br />
 
     <div class='titanic titanic-caps'></div>
     <div class='titanic titanic-chat'></div>
     <div class='titanic titanic-checkbox'></div>
     <div class='titanic titanic-expand'></div>
-    <div class='titanic titanic-expensive1'></div>
-    <div class='titanic titanic-expensive2'></div>
+    <div class='titanic titanic-cheap'></div>
+    <div class='titanic titanic-expensive'></div>
     <div class='titanic titanic-idea'></div>
     <div class='titanic titanic-mailbox'></div>
     <div class='titanic titanic-mic'></div>
-    <div class='titanic titanic-no_microphone'></div>
+    <div class='titanic titanic-no-mic'></div>
     <div class='titanic titanic-online'></div>
     <div class='titanic titanic-pause'></div>
-    <div class='titanic titanic-quick_mode'></div>
-    <div class='titanic titanic-shopping_cart'></div>
+    <div class='titanic titanic-power'></div>
+    <div class='titanic titanic-shopping'></div>
     <div class='titanic titanic-smile'></div>
     <div class='titanic titanic-stop'></div>
     <div class='titanic titanic-unlock'></div>
@@ -63,7 +40,7 @@
 </div>
 
 <script>
-    var titanic = new Titanic(); // initialization
+    var titanic = new Titanic('../dist/icons/'); // initialization
     // API
     // titanic.isInitialized()
     // -- just true/false flag
