@@ -1,8 +1,6 @@
-
 <html>
 <head>
 <style>
-
     .titanic {
         width: 100px;
         height: 100px;
@@ -31,42 +29,50 @@
 </style>
 
 <!--Insert this once for animated icons-->
-<!-- inject:js -->
-<script src="../dist/js/bodymovin.min.js"></script>
 <script src="../dist/js/titanic.min.js"></script>
-<!-- endinject -->
-
+<script src="../dist/vendor/bodymovin.min.js"></script>
 </head>
 
-
 <body>
+
+<input id="myInput" value="expand">
+<button onclick="titanic.play(getElementById('myInput').value)">Play</button>
 
 <!--Container for all icons-->
 <div class="block">
 
-    <div id='caps' class='titanic'></div>
-    <div id='chat' class='titanic'></div>
-    <div id='checkbox' class='titanic'></div>
-    <div id='expand' class='titanic'></div>
-    <div id='expensive1' class='titanic'></div>
-    <div id='expensive2' class='titanic'></div>
-    <div id='idea' class='titanic'></div>
-    <div id='mailbox' class='titanic'></div>
-    <div id='mic' class='titanic'></div>
-    <div id='no_microphone' class='titanic'></div>
-    <div id='online' class='titanic'></div>
-    <div id='pause' class='titanic'></div>
-    <div id='quick_mode' class='titanic'></div>
-    <div id='shopping_cart' class='titanic'></div>
-    <div id='smile' class='titanic'></div>
-    <div id='stop' class='titanic'></div>
-    <div id='unlock' class='titanic'></div>
-    <div id='zoom' class='titanic'></div>
+    <div class='titanic titanic-caps'></div>
+    <div class='titanic titanic-chat'></div>
+    <div class='titanic titanic-checkbox'></div>
+    <div class='titanic titanic-expand'></div>
+    <div class='titanic titanic-expensive1'></div>
+    <div class='titanic titanic-expensive2'></div>
+    <div class='titanic titanic-idea'></div>
+    <div class='titanic titanic-mailbox'></div>
+    <div class='titanic titanic-mic'></div>
+    <div class='titanic titanic-no_microphone'></div>
+    <div class='titanic titanic-online'></div>
+    <div class='titanic titanic-pause'></div>
+    <div class='titanic titanic-quick_mode'></div>
+    <div class='titanic titanic-shopping_cart'></div>
+    <div class='titanic titanic-smile'></div>
+    <div class='titanic titanic-stop'></div>
+    <div class='titanic titanic-unlock'></div>
+    <div class='titanic titanic-zoom'></div>
 
 </div>
 
 <script>
-    titanic.begin('../dist/icons/');
+    var titanic = new Titanic(); // initialization
+    // API
+    // titanic.isInitialized()
+    // -- just true/false flag
+    // titanic.items
+    // -- list of titanic items
+    // titanic.items[index].on(), titanic.items[index].off(), titanic.items[index].play()
+    // -- play animations of the titanic item by index
+    // titanic.on(token), titanic.off(token), titanic.play(token)
+    // -- play animations of the titanic item by token (name)
 </script>
 
 </body>

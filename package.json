@@ -1,6 +1,6 @@
 {
   "name": "titanic-icons",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A pack of animated icons",
   "main": "dist/index.html",
   "dependencies": {
