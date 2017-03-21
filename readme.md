@@ -4,7 +4,7 @@ A collection of animated icons + javascript library.
 
 ![Preview](/docs/images/animated-icons-preview.gif)
 
-**[Preview all icons](https://rawgit.com/icons8/titanic/master/dist/index.html)**
+**[Preview all icons](https://rawgit.com/icons8/titanic/master/demo/index.html)**
 
 ## Installation
 
@@ -21,7 +21,7 @@ And initialize it before the body closes:
 
 ```html
 <script>
-    titanic.begin();
+    var titanic = new Titanic();
 </script>
 ```
 This way, you can add icons anywhere in your HTML using this tag:
@@ -60,6 +60,36 @@ Then, if you have a div with id="chat", Titanic will search for icons in /my/bas
 
 ```
 npm install titanic-icons --save
+```
+
+## API
+
+* ```titanic.isInitialized()``` -- just true/false flag
+
+* ```titanic.items``` -- list of titanic items
+* ```titanic.items[index].on(), titanic.items[index].off(), titanic.items[index].play()``` -- play animations of the titanic item by index
+* ```titanic.on(token), titanic.off(token), titanic.play(token)``` -- play animations of the titanic item by token (name)
+
+## Example
+
+```html
+<head>
+    <!--Inserting the scripts once for the whole page-->
+    <script src="https://cdn.rawgit.com/icons8/titanic/e2168ea3/dist/js/titanic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
+</head>
+<body>
+    <!--Inserting an icon-->
+    <div class='titanic titanic-checkbox'></div>
+
+    <!--Initializing-->
+    <script>
+        var titanic = new Titanic();
+    </script>
+
+    <!--Clicking turns this icon on-->
+    <button onclick="titanic.on(getElementById('checkbox').value)">On</button>
+</body>
 ```
 
 ## Credits
