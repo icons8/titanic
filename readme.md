@@ -97,4 +97,10 @@ JavaScript is basically [bodymovin](https://github.com/bodymovin/bodymovin) plus
 
 Icons are created by [Margarita Ivanchikova](https://dribbble.com/imargarita) from [Icons8](https://icons8.com/). She has many more awesome animations in her portfolio.
 
+The code rewritten by [Denis Alexanov](https://github.com/dhilt), my teacher and guru. Thank you!
+
+Project is produced by Icons, author of the famous icon library, [IconPharm](https://iconpharm.com), and [Sleek Logos](https://sleeklogos.design).
+
+The code is created by Icons8 
+
 ![Magritte](/docs/images/magritte.gif)
