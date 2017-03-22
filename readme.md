@@ -26,7 +26,7 @@ And initialize it before the body closes:
 ```
 This way, you can add icons anywhere in your HTML using this tag:
 ```html
-<div id='chat' class='titanic'></div>
+<div class='titanic titanic_chat'></div>
 ```
 Where chat can be any of these:
 * caps
