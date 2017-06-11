@@ -1,39 +1,40 @@
-
 <html>
 <head>
-<style>
+  <style>
 
     .titanic {
-        width: 100px;
-        height: 100px;
-        display: inline-block;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
 
-        /*Decoration for the presentation only, remove it when using on your own*/
-        padding:20px;
+      /*Decoration for the presentation only, remove it when using on your own*/
+      padding: 20px;
     }
 
     .titanic path {
-        fill: #249795;
-        stroke: #249795;
+      fill: #249795;
+      stroke: #249795;
     }
 
     body {
-        display: table;
-        height: 100%;
+      display: table;
+      height: 100%;
+      margin: 0;
     }
 
     .block {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        padding: 0 50px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0 50px;
     }
-</style>
+  </style>
 
-<!--Insert this once for animated icons-->
-<!-- inject:js -->
-<!-- endinject -->
-
+  <!--Insert this once for animated icons-->
+  <!-- inject:js -->
+  <!-- endinject -->
+  <script src="./js/titanic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
 </head>
 
 
@@ -42,29 +43,26 @@
 <!--Container for all icons-->
 <div class="block">
 
-    <div id='caps' class='titanic'></div>
-    <div id='chat' class='titanic'></div>
-    <div id='checkbox' class='titanic'></div>
-    <div id='expand' class='titanic'></div>
-    <div id='cheap' class='titanic'></div>
-    <div id='expensive' class='titanic'></div>
-    <div id='idea' class='titanic'></div>
-    <div id='mailbox' class='titanic'></div>
-    <div id='mic' class='titanic'></div>
-    <div id='no-mic' class='titanic'></div>
-    <div id='online' class='titanic'></div>
-    <div id='pause' class='titanic'></div>
-    <div id='power' class='titanic'></div>
-    <div id='shopping' class='titanic'></div>
-    <div id='smile' class='titanic'></div>
-    <div id='stop' class='titanic'></div>
-    <div id='unlock' class='titanic'></div>
-    <div id='zoom' class='titanic'></div>
+  <div class='titanic titanic-broken-link'></div>
+  <div class='titanic titanic-clear-filters'></div>
+  <div class='titanic titanic-deposit-withdrawal'></div>
+  <div class='titanic titanic-menu-close'></div>
+  <div class='titanic titanic-open-closed'></div>
+  <div class='titanic titanic-open-message'></div>
+  <div class='titanic titanic-search-close'></div>
+  <div class='titanic titanic-shipped'></div>
+  <div class='titanic titanic-sorting-alphabet'></div>
+  <div class='titanic titanic-sorting-numerical'></div>
+  <div class='titanic titanic-switch'></div>
+  <div class='titanic titanic-toggle'></div>
 
 </div>
 
 <script>
-    titanic.begin('../dist/icons/');
+  var titanic = new Titanic({
+    hover: true,
+    click: true
+  })
 </script>
 
 </body>
