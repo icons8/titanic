@@ -84,7 +84,10 @@ npm install titanic-icons --save
 
     <!--Initializing-->
     <script>
-        var titanic = new Titanic();
+        var titanic = new Titanic({
+          hover: true, // auto animated on hover (default true)
+          click: true  // auto animated on click/tap (default false)
+        });
     </script>
 
     <!--Clicking turns this icon on-->
