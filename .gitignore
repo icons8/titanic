@@ -1,7 +1,6 @@
-# Added manually by Ivan
-
+# Added manually
 dist/maps
-
+.idea
 
 # Created by https://www.gitignore.io/api/node
 
