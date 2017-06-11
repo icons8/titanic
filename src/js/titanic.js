@@ -68,8 +68,6 @@ var Titanic; // a global library container
   function initialize (options, callback) {
     var baseURL = options.baseURL
 
-    console.log('baseURL', baseURL)
-
     document.addEventListener('DOMContentLoaded', function () {
       var titanicElements = document.getElementsByClassName('titanic')
       var i = titanicElements.length
