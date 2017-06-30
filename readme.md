@@ -102,7 +102,7 @@ Icons are created by [Margarita Ivanchikova](https://dribbble.com/imargarita) fr
 
 The code rewritten by [Denis Alexanov](https://github.com/dhilt), my teacher and guru. Thank you!
 
-Project is produced by Icons, author of the famous icon library, [IconPharm](https://iconpharm.com), and [Sleek Logos](https://sleeklogos.design).
+Project is produced by Icons8, author of the famous icon library, [IconPharm](https://iconpharm.com), and [Sleek Logos](https://sleeklogos.design).
 
 The code is created by Icons8 
 
