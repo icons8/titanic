@@ -104,6 +104,6 @@ The code rewritten by [Denis Alexanov](https://github.com/dhilt), my teacher and
 
 Project is produced by Icons8, author of the famous icon library, [IconPharm](https://iconpharm.com), and [Sleek Logos](https://sleeklogos.design).
 
-The code is created by Icons8 
+Yours, [Ivan Braun](https://aiandtractors.com) from [Argentinian shelter](https://ilbuco.com.ar).
 
 ![Magritte](/docs/images/magritte.gif)
