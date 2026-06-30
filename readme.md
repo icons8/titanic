@@ -4,7 +4,7 @@ A collection of animated icons + javascript library.
 
 ![Preview](/docs/images/animated-icons-preview.gif)
 
-**[Preview all icons](https://rawgit.com/icons8/titanic/master/demo/index.html)**
+**[Preview all icons](https://raw.githack.com/icons8/titanic/master/demo/index.html)**
 
 ## Installation
 
@@ -14,7 +14,7 @@ You can install it either via CDN or npm.
 
 Insert this string to your HTML head:
 ```html
-<script src="https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/icons8/titanic@master/dist/js/titanic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
 ```
 And initialize it before the body closes:
@@ -75,7 +75,7 @@ npm install titanic-icons --save
 ```html
 <head>
     <!--Inserting the scripts once for the whole page-->
-    <script src="https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/icons8/titanic@master/dist/js/titanic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
 </head>
 <body>
@@ -94,6 +94,14 @@ npm install titanic-icons --save
     <button onclick="titanic.on(getElementById('checkbox').value)">On</button>
 </body>
 ```
+
+## About Icons8
+
+Titanic is made by [Icons8](https://icons8.com) — icons, illustrations, photos, music, and AI tools for designers and developers.
+
+- **[Animated icons](https://icons8.com/animated-icons)** — 4,500+ animated icons crafted by our in-house motion team, in Lottie JSON, GIF, and After Effects. The same library that powers Titanic.
+- **[Icons](https://icons8.com/icons)** — 1,500,000+ icons in 132 consistent styles, from iOS 27 and Windows 11 to Material and Glyph Neue. Pixel-perfect, recolorable, in SVG and PNG.
+- **[Illustrations](https://icons8.com/illustrations)** — 108,000+ illustrations in 338 styles: flat, 3D, hand-drawn, and animated. SVG and PNG.
 
 ## Credits
 JavaScript is basically [bodymovin](https://github.com/bodymovin/bodymovin) plus few lines of my code. It's a solid library with an awesome name. Thank you, guys.
